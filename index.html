@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+</head>
+<body>
+    <script>
+        //Multiplication Table
+        const userInput = prompt("Enter a number for the multiplication table:");
+        const userNumber = parseInt(userInput);
+
+        if (isNaN(userNumber)) {
+            console.log("Invalid input. Please enter a valid number.");
+            // You might want to alert or display this message on the page too
+            // alert("Invalid input. Please enter a valid number.");
+        } else {
+            for (let count = 1; count <= 12; count++) {
+                const product = count * userNumber;
+                console.log(`${userNumber} x ${count} = ${product}`);
+                // To display on the page instead of just console:
+                document.write(`${userNumber} x ${count} = ${product}<br>`);
+            }
+        }
+    </script>
+</body>
+</html>
